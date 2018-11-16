@@ -1,48 +1,80 @@
-body{
-	background-color: #333;
+body {
+  background-color: #333;
+  font-family: sans-serif;
 }
 
-.middle{
-	text-align: center; 
-	position:absolute;
-	left:50%;
-	top:50%;
-	transform: translate(-50%,-50%);
+.middle {
+  width: 80%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-.row{
-	margin: 20px 0;
+.row {
+  margin: 20px 0;
 }
-.btn{
-	display:inline-block;
-	width: 200px; 
-	height: 40px;
-	line-height: 40px;
-	background-color: green;
-	color:white;
-	text-align: center;
-    border-radius: 7px;
-    transition: box-shadow 0.4s 0s ease-in-out;
-     transition: transform 0.2s 0s ease-in-out;
-    
-}
-
-.btn:hover{
-	box-shadow: 9px 11px 16px -3px  rgba(0,0,0,0.3);
-	transform: translate(-5px,-5px);
-}
-
-ul.btn-hover-group li{
-  display:inline-block;
-  width: 100px;
+.btn {
+  display: inline-block;
+  width: 200px;
   height: 40px;
-  background-color: #6279B8;
+  line-height: 40px;
+  background-color: #379634;
+  color: white;
+  text-align: center;
+  border-radius: 7px;
+  transition: all 0.3s 0s ease-in-out;
+  transition-property: box-shadow, transform;
+
+  cursor: pointer;
 }
-ul.btn-hover-group > .current{
-	height: 5px;
-	width: 40px;
-	background-color: #000;
-	position:absolute;
+
+.btn:hover {
+  box-shadow: 9px 11px 16px -3px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px, -5px);
 }
-ul.btn-hover-group li:hover ~.current{
-	position:;
+
+/* nav */
+ul.btn-hover-group {
+  background-color: #379634;
+  padding: 0;
+  position: relative;
+}
+ul.btn-hover-group .current {
+  display: block;
+  background-color: white;
+  width: 120px;
+  height: 4px;
+  position: absolute;
+  left: 0%;
+}
+ul.btn-hover-group li {
+  display: inline-block;
+  height: 20px;
+  width: 120px;
+  line-height: 20px;
+  padding: 20px;
+  margin: 0 20px;
+  background-color: #388a35;
+  color: white;
+}
+.current {
+  transition: all 0.3s;
+  opacity: 0;
+}
+ul.btn-hover-group li:nth-child(1):hover ~ .current {
+  left: 16%;
+  opacity: 1;
+}
+ul.btn-hover-group li:nth-child(2):hover ~ .current {
+  left: 35%;
+  opacity: 1;
+}
+ul.btn-hover-group li:nth-child(3):hover ~ .current {
+  left: 54%;
+  opacity: 1;
+}
+ul.btn-hover-group li:nth-child(4):hover ~ .current {
+  left: 73%;
+  opacity: 1;
 }
